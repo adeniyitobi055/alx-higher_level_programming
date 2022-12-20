@@ -45,12 +45,13 @@ class Square:
         if type(value) is not int:
             """raise error"""
             raise TypeError("size must be an integer")
-        elif value < 0:
-            """raise error"""
-            raise ValueError("size must be >= 0")
         else:
-            """Initialize"""
-            self.__size = value
+            if value < 0:
+                """raise error"""
+                raise ValueError("size must be >= 0")
+            else:
+                """Initialize"""
+                self.__size = value
             
     def my_print(self):
         """Prints square
