@@ -16,7 +16,7 @@ class Square:
     @property.setter
     def size(self, value):
         """if statement"""
-        if type(value) != int:
+        if type(value) is not int:
             """raise error"""
             raise TypeError("size must be an integer")
         elif value < 0:
