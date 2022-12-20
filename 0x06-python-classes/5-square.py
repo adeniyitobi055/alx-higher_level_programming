@@ -8,7 +8,7 @@ class Square:
         """initializes __size of self with size"""
         self.__size = size
 
-    @propert
+    @property
     def size(self):
         """retrieves __size of self"""
         return self.__size
