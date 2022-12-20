@@ -13,7 +13,7 @@ class Square:
         """retrieve __size of self"""
         return self.__size
 
-    @property.setter
+    @size.setter
     def size(self, value):
         """if statement"""
         if type(value) is not int:
