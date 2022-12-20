@@ -13,7 +13,7 @@ class Square:
         Args:
             size (int): size of the sides of the square
             position (tuple): position of the square in 2D space
-        Return:
+        Returns:
             None
         """
         self.size = size
@@ -21,7 +21,7 @@ class Square:
 
     def area(self):
         """Calculate area of the square
-        Return:
+        Returns:
             The area of the square
         """
         return (self.__size) ** 2
@@ -29,7 +29,7 @@ class Square:
     @property
     def size(self):
         """Getter of __size
-        Return:
+        Returns:
             The size of the square
         """
         return self.__size
@@ -39,7 +39,7 @@ class Square:
         """Setter of __size
         Args:
             value (int): size of the sides of the square
-        Return:
+        Returns:
             None
         """
         if type(value) is not int:
@@ -50,8 +50,8 @@ class Square:
             self.__size = value
 
     def my_print(self):
-        """Prints square
-        Return:
+        """Prints the square
+        Returns:
             None
         """
         if self.__size == 0:
@@ -66,7 +66,7 @@ class Square:
     @property
     def position(self):
         """getter of __position
-        Return:
+        Returns:
             The position of the square in 2D space
         """
         return self.__position
@@ -76,7 +76,7 @@ class Square:
         """setter of __position
         Args:
             value (tuple): position of the square in 2D space
-        Return:
+        Returns:
             None
         """
         if type(value) is not tuple or len(value) != 2 or \
