@@ -43,14 +43,11 @@ class Square:
             None
         """
         if type(value) is not int:
-            """raise error"""
             raise TypeError("size must be an integer")
         else:
             if value < 0:
-                """raise error"""
                 raise ValueError("size must be >= 0")
             else:
-                """Initialize"""
                 self.__size = value
             
     def my_print(self):
@@ -61,7 +58,7 @@ class Square:
         if self.__size == 0:
             print()
             return
-        for i in range(self.__posiotion[1]):
+        for i in range(self.__position[1]):
             print()
         for j in range(self.__size):
             print("".join([" " for k in range(self.__position[0])]), end="")
