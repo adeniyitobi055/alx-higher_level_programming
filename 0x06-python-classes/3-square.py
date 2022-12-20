@@ -13,7 +13,7 @@ class Square:
             """raises an error"""
             raise ValueError("size must be >= 0")
         else:
-            """ initialize"""
+            """initialize"""
             self.__size = size
     """Defines area function"""
     def area(self):
