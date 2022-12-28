@@ -1,0 +1,124 @@
+# 0-add_integer.txt
+
+=========================
+How to use 0-add_integer 
+=========================
+
+This module defines an integer addition ``add_integer(a, b=98)``.
+
+Using Addition
+---------------
+
+This ``add_integer(...)`` returns the addition of its two argument. For number,
+the value is equivalent to using the ``+`` operator.
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(2, 3)
+	5
+
+::
+
+	>>> add_integer(2, -3)
+	1
+
+Note the the function also works with floating-point values.
+
+::
+
+	>>> add_integer(2.0, 3.0)
+	5
+
+Note that floats are casted into ints before addition is performed
+
+::
+
+	>>> add_integer(2.9, 0.2)
+	2
+
+::
+
+	>>> add_integer(-2.9, -0.2)
+	-2
+
+Note that floating and non-floating point value can be combined
+
+::
+
+	>>> add_integer(2.3, -3)
+	-1
+
+The second argument is optional - by default, it is 98.
+
+::
+
+	>>> add_integer(2)
+	100
+
+Non-number
+===========
+
+``add_integer()`` expects both argument to be integers or floats.
+If either argument is a non-integer or non-float, a TypeError is raise:
+
+::
+
+	>>> add_integer("hello", 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(2, "hello")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+::
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(2.3, None)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+If both arguments are non-integers and non-floats, a TypeError is printed
+only for the first argument.
+
+::
+
+	>>> add_integer("hello", "there")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+The function will fail if infinity is provided.
+
+::
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+::
+
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+And again with Nan numbers.
+
+::
+
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NAN to integer
+
+::
+
+	>>> add_integer(2, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NAN to integer
