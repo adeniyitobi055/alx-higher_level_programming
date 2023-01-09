@@ -10,7 +10,7 @@ checking for module docstring:
 	True
 
 checking for class docstring:
-	>>> c = __import__('1-my_list-).MyList.__doc__
+	>>> c = __import__('1-my_list').MyList.__doc__
 	>>> len(c) > 1
 	True
 
