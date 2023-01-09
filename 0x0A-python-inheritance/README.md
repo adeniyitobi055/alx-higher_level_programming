@@ -10,3 +10,9 @@ One core concept in object-oriented programming (OOP) language is inheritance. I
 - Less development and maintenance expenses result from an inheritance.
 
 This project will show some cases of how to use inheritance and its advantages will correspond to the above points.
+
+### Tests(software testing)
+This directory contains files used for test cases to test the function making sure no criteria is left out.
+
+### Test_main(main functions)
+This directory contains files that are used to test the functions to verify if they're operating as expected.
