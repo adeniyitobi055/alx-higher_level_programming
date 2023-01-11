@@ -9,13 +9,13 @@ def append_after(filename="", search_string="", new_string=""):
     Method for inserting text after search string
     """
     lines = []
-    with open(filename, mode="r", encoding="UTF-8") as a_file:
+    with open(filename, "r", encoding="UTF-8") as a_file:
         lines = a_file.readlines()
         i = 0
         while i < len(lines):
             if search_string in lines[i]:
                 lines[i:i + 1] = [lines[i], new_string]
                 i += 1
-            i +=1
-    with open(filename, mode="w", encoding="UTF-8") as a_file:
+            i += 1
+    with open(filename, "w", encoding="UTF-8") as a_file:
         a_file.writelines(lines)
