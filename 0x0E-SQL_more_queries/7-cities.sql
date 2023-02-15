@@ -7,7 +7,7 @@ CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 -- states_id INT, not null, foreign key that references id 'states' table
 -- name varchar not null
 -- if table already exist it doesn't fail
-CREATE TABLE IF NOT EXISTS cities
+CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities
 (
 	id INT UNIQUE AUTO_INCREMENT NOT NULL,
 	state_id INT NOT NULL,
