@@ -13,14 +13,15 @@ if __name__ == "__main__":
     'rails' by the user 'rails'
     """
 
-    url = "https://developer.github.com/v3/repos/commits/".format(
+    url = "https://developer.github.com/v3/repos/commits".format(
             sys.argv[1], sys.argv[2])
-    r = request.get(url)
+
+    r = requests.get(url)
     commits = r.json()
     try:
         for i in range(10):
             print("{}: {}".format(
                   commits[i].get("sha"),
-                  commits[i].get("author").get("name")))
+                  commits[i].get("commit").get("author").get("name")))
     except IndexError:
         pass
